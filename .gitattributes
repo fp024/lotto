@@ -1,0 +1,16 @@
+#
+# https://help.github.com/articles/dealing-with-line-endings/
+#
+# Linux start script should use lf
+/gradlew   text eol=lf
+*.sh       text eol=lf
+
+
+# These are Windows script files and should use crlf
+*.bat      text eol=crlf
+*.cmd      text eol=crlf
+
+# prettier 포멧팅 범위에 파일에 대해서는 eol을 항상 lf로 고정
+*.html     text eol=lf
+*.js       text eol=lf
+*.css      text eol=lf

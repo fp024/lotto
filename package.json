@@ -1,0 +1,8 @@
+{
+  "devDependencies": {
+    "prettier": "3.3.3"
+  },  
+  "scripts": {
+    "format": "npx prettier --write \"./**/*.{html,css,js,json,vue}\""
+  }
+}

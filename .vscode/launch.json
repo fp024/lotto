@@ -1,0 +1,14 @@
+{
+  "configurations": [
+    {
+      "type": "java",
+      "name": "[LOCAL] LottoApplication",
+      "request": "launch",
+      "cwd": "${workspaceFolder}",
+      "mainClass": "org.fp024.lotto.LottoApplication",
+      "projectName": "guestbook",
+      "args": "--spring.profiles.active=local",
+      "envFile": "${workspaceFolder}/.env"
+    }
+  ]
+}

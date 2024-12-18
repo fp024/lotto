@@ -1,0 +1,12 @@
+node_modules
+build
+package-lock.json
+package.json
+target
+
+.git
+
+.vscode
+.idea
+
+cspell.json

@@ -1,0 +1,25 @@
+{
+  // https://cspell.org/
+  "version": "0.2",
+  "ignorePaths": [
+    "/bin/**",
+    "/build/**",
+    "/.vscode/**",
+    "/.idea/**",
+    "/gradlew",
+    "/gradlew.bat",
+    "/src/main/resources/static/css",
+    "/src/main/resources/application*.*",
+    "/docs/database.md"
+  ],
+  "words": [
+    "gradlew",
+    "jquery",
+    "projectlombok",
+    "Quarydsl",
+    "thymeleaf",
+    "webjars"
+  ],
+  "ignoreWords": [],
+  "import": []
+}
