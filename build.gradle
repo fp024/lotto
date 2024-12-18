@@ -66,7 +66,20 @@ dependencies {
   testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
 }
 
+// Explicitly setting up instrumentation for inline mocking (Java 21+) 설정
+// * https://javadoc.io/doc/org.mockito/mockito-core/latest/org/mockito/Mockito.html#0.3
+configurations {
+  mockitoAgent
+}
+
+dependencies {
+  mockitoAgent('org.mockito:mockito-core') {
+    transitive = false
+  }
+}
+
 tasks.named('test') {
+  jvmArgs "-javaagent:${configurations.mockitoAgent.asPath}"
   useJUnitPlatform()
   testLogging {
     outputs.upToDateWhen { false }
