@@ -8,8 +8,6 @@ plugins {
 group = 'org.fp024.lotto'
 version = '0.0.1-SNAPSHOT'
 
-[compileJava, compileTestJava]*.options*.encoding = "${projectEncoding}"
-
 java {
   toolchain {
     languageVersion = JavaLanguageVersion.of("${javaVersion}")
@@ -18,6 +16,7 @@ java {
 
 tasks.withType(JavaCompile).configureEach {
   options.compilerArgs.add("-parameters")
+  options.encoding = "${projectEncoding}"
 }
 
 configurations {
