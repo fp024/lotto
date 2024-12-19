@@ -10,7 +10,7 @@ spring-boot-v3dot4-plugin = "3.4.0"
 spring-boot-v3dot3-plugin = "3.3.6"
 
 # https://github.com/spring-gradle-plugins/dependency-management-plugin
-spring-dependency-management-plugin = "1.1.6"
+spring-dependency-management-plugin = "1.1.7"
 
 
 ##### libraries versions #####
