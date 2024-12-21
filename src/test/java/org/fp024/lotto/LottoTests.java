@@ -16,7 +16,7 @@ import org.junit.jupiter.api.Test;
  중복된 것 우선순위 적용: [15, 24, 29, 32, 35, 39]
  중복되지 않은 것 우선순위 적용: [2, 35, 39, 43, 44, 45]
  완전 랜덤 01: [2, 10, 29, 31, 32, 45]
- 완전 랜덤 01: [9, 10, 16, 20, 34, 39]
+ 완전 랜덤 02: [9, 10, 16, 20, 34, 39]
  완전 랜덤 03: [11, 15, 17, 21, 22, 32]
 */
 class LottoTests {
@@ -56,7 +56,7 @@ class LottoTests {
     // 완전 랜덤 02
     randomSelection = selectRandomNumbers(numbers, 6);
     randomSelection.sort(Comparator.naturalOrder());
-    System.out.println("완전 랜덤 01: " + randomSelection);
+    System.out.println("완전 랜덤 02: " + randomSelection);
 
     // 완전 랜덤 03
     randomSelection = selectRandomNumbers(numbers, 6);
