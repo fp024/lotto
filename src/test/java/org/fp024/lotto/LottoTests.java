@@ -11,14 +11,22 @@ import java.util.Random;
 import java.util.Set;
 import org.junit.jupiter.api.Test;
 
+/*
+ 1152회 도전 👍
+ 중복된 것 우선순위 적용: [15, 24, 29, 32, 35, 39]
+ 중복되지 않은 것 우선순위 적용: [2, 35, 39, 43, 44, 45]
+ 완전 랜덤 01: [2, 10, 29, 31, 32, 45]
+ 완전 랜덤 01: [9, 10, 16, 20, 34, 39]
+ 완전 랜덤 03: [11, 15, 17, 21, 22, 32]
+*/
 class LottoTests {
   @Test
   void run() {
-    String slotA = "5  9  12  36  42  45";
-    String slotB = "10  11 22 26  30  43";
-    String slotC = "6  10  13  27  31  38";
-    String slotD = "7  14  15  23  29  34";
-    String slotE = "3  6  8  11  25  30";
+    String slotA = "2  15  29  32  33  45";
+    String slotB = "4  9  24  32  39  44";
+    String slotC = "7  10  21  23  34  43";
+    String slotD = "3  11  17  22  24  35";
+    String slotE = "15  16  20  28  29  31";
 
     List<Integer> numbers = new ArrayList<>();
     numbers.addAll(parseNumbers(slotA));
@@ -40,10 +48,20 @@ class LottoTests {
     prioritizedUniques.sort(Comparator.naturalOrder());
     System.out.println("중복되지 않은 것 우선순위 적용: " + prioritizedUniques);
 
-    // 완전 랜덤
+    // 완전 랜덤 01
     List<Integer> randomSelection = selectRandomNumbers(numbers, 6);
     randomSelection.sort(Comparator.naturalOrder());
-    System.out.println("완전 랜덤: " + randomSelection);
+    System.out.println("완전 랜덤 01: " + randomSelection);
+
+    // 완전 랜덤 02
+    randomSelection = selectRandomNumbers(numbers, 6);
+    randomSelection.sort(Comparator.naturalOrder());
+    System.out.println("완전 랜덤 01: " + randomSelection);
+
+    // 완전 랜덤 03
+    randomSelection = selectRandomNumbers(numbers, 6);
+    randomSelection.sort(Comparator.naturalOrder());
+    System.out.println("완전 랜덤 03: " + randomSelection);
   }
 
   public static List<Integer> parseNumbers(String slot) {
