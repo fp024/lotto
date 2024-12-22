@@ -11,12 +11,11 @@
   },
   "[javascript]": {
     "editor.formatOnSave": true
-  }, 
+  },
   "spring-boot.ls.problem.version-validation.UPDATE_LATEST_MINOR_VERSION": "IGNORE",
- 
-  // Windows의 Use Unicode UTF-8 for worldwide language support 설정을 
-  // 사용하지 않는 환경에서는 다음 설정이 필요할 수 있다.
-  // "java.test.config": {
-  //   "encoding": "MS949"
-  // }
+  "java.test.config": {
+    "vmArgs": [
+      "-javaagent:${workspaceFolder}/javaagent-libs/mockito-core-5.14.2.jar"
+    ]
+  }
 }

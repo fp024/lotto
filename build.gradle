@@ -85,3 +85,28 @@ tasks.named('test') {
     showStandardStreams = true
   }
 }
+
+// ----------------------------------------------------------------------------
+// vscode-java-test가 build.gradle의 test 설정을 인식하지 못하기 때문에,
+// -javaagent 설정이 필요할 경우 라이브러리를 수동으로 복사하는 테스크를 만들었다.
+// gradle cleanJavaAgentLibs를 실행해둔 후에, VSCode 상에서 테스트를 수행하자!
+task copyMockitoJar(type: Copy) { 
+  from configurations.mockitoAgent into "${project.rootDir}/javaagent-libs" 
+}
+
+// javaagent-libs 디렉토리를 비움
+task cleanJavaAgentLibs(type: Delete) {
+  delete fileTree(dir: "${project.rootDir}/javaagent-libs", include: '**/*.jar')
+}
+
+tasks.named('copyMockitoJar').configure {
+  dependsOn cleanJavaAgentLibs
+}
+
+// 의존성 해결 후 Jar 파일을 복사
+afterEvaluate {
+  tasks.named('classes').configure {
+    dependsOn copyMockitoJar
+  }
+}
+// ----------------------------------------------------------------------------

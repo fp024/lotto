@@ -63,3 +63,6 @@ coverage
 
 ### etc ###
 *.bak
+
+# vscode-java-test에서 사용할 Java Agent 라이브러리 보관 디렉토리
+/javaagent-libs

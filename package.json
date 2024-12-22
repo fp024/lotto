@@ -1,8 +1,15 @@
 {
-  "devDependencies": {
-    "prettier": "3.3.3"
-  },  
+  "name": "project-init-script",
+  "version": "1.0.0",
+  "type": "module",
+  "private": "true",
   "scripts": {
-    "format": "npx prettier --write \"./**/*.{html,css,js,json,vue}\""
+    "format": "npx prettier --write \"./**/*.{html,css,js,json,vue}\"",
+    "copy-mockito-jar": "gradle copyMockitoJar",
+    "init-javaagent": "npm run copy-mockito-jar && node scripts/initJavaAgent.js"
+  },
+  "dependencies": {
+    "comment-json": "^4.2.5",
+    "prettier": "3.3.3"
   }
 }
