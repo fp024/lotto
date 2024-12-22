@@ -5,7 +5,7 @@
   "private": "true",
   "scripts": {
     "format": "npx prettier --write \"./**/*.{html,css,js,json,vue}\"",
-    "copy-mockito-jar": "gradle copyMockitoJar",
+    "copy-mockito-jar": "node scripts/runGradleWrapper.js copyMockitoJar",
     "init-javaagent": "npm run copy-mockito-jar && node scripts/initJavaAgent.js"
   },
   "dependencies": {
