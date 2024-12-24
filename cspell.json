@@ -13,8 +13,10 @@
     "/docs/database.md"
   ],
   "words": [
+    "codegen",
     "gradlew",
     "jquery",
+    "prefs",
     "projectlombok",
     "Quarydsl",
     "thymeleaf",

@@ -5,8 +5,10 @@
   "private": "true",
   "scripts": {
     "format": "npx prettier --write \"./**/*.{html,css,js,json,vue}\"",
+    "add-javac-parameters-option": "node scripts/addJavacParametersOption.js",
     "copy-mockito-jar": "node scripts/runGradleWrapper.js copyMockitoJar",
-    "init-javaagent": "npm run copy-mockito-jar && node scripts/initJavaAgent.js"
+    "init-javaagent": "node scripts/initJavaAgent.js",
+    "init-project": "npm run add-javac-parameters-option && npm run copy-mockito-jar && npm run init-javaagent"
   },
   "dependencies": {
     "comment-json": "^4.2.5",
