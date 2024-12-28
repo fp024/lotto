@@ -7,8 +7,8 @@
     "format": "npx prettier --write \"./**/*.{html,css,js,json,vue}\"",
     "add-javac-parameters-option": "node scripts/addJavacParametersOption.js",
     "copy-mockito-jar": "node scripts/runGradleWrapper.js copyMockitoJar",
-    "init-javaagent": "node scripts/initJavaAgent.js",
-    "init-project": "npm run add-javac-parameters-option && npm run copy-mockito-jar && npm run init-javaagent"
+    "init-test-jvm-options": "node scripts/initTestJvmOptions.js",
+    "init-project": "npm run add-javac-parameters-option && npm run copy-mockito-jar && npm run init-test-jvm-options"
   },
   "dependencies": {
     "comment-json": "^4.2.5",

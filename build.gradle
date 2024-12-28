@@ -78,7 +78,7 @@ dependencies {
 }
 
 tasks.named('test') {
-  jvmArgs "-javaagent:${configurations.mockitoAgent.asPath}"
+  jvmArgs "-javaagent:${configurations.mockitoAgent.asPath}", "-Xshare:off"
   useJUnitPlatform()
   testLogging {
     outputs.upToDateWhen { false }
