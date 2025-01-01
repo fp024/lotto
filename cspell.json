@@ -20,6 +20,7 @@
     "projectlombok",
     "Quarydsl",
     "thymeleaf",
+    "ultraq",
     "webjars"
   ],
   "ignoreWords": [],

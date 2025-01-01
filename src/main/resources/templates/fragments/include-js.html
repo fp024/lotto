@@ -1,0 +1,12 @@
+<!-- 외부 JS 파일 모음 -->
+<!doctype html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+  <th:block th:fragment="scripts">
+    <!-- jQuery JS-->
+    <script th:src="@{/webjars/jquery/jquery.min.js}"></script>
+    <!-- Bootstrap core JS-->
+    <script th:src="@{/webjars/bootstrap/js/bootstrap.bundle.min.js}"></script>
+    <!-- Core theme JS-->
+    <script th:src="@{/js/simple-sidebar.js}"></script>
+  </th:block>
+</html>

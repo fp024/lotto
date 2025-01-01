@@ -1,0 +1,9 @@
+/*
+  Bootstrap 5 스타일 중에, 뭔가 조정하고 싶은 것을 여기에 따로 정의해두자!
+*/
+.bsc-w-40 {
+  width: 40% !important;
+}
+.cursor-pointer:hover {
+  cursor: pointer;
+}

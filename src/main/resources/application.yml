@@ -5,7 +5,7 @@ spring:
   application:
     name: lotto
   profiles:
-    active: local
+    active: dev
   datasource:    
     driver-class-name: org.mariadb.jdbc.Driver
     url: jdbc:mariadb://localvmdb.mariadb_11:33306/lotto
@@ -15,7 +15,7 @@ spring:
       minimum-idle: 5
       maximum-pool-size: 15
       idle-timeout: 30000
-      pool-name: GuestbookHikariCP
+      pool-name: LottoHikariCP
   jpa:
     hibernate:
       ddl-auto: update      
@@ -43,7 +43,7 @@ spring:
   config:
     activate:
       on-profile:
-      - local      
+      - dev      
   devtools:
     # 💡자동으로 다음에 명시된 프로퍼티를 추가하는데, 나는 필요한 것만 명시적으로 넣는 것이 좋겠다.
     # https://github.com/spring-projects/spring-boot/blob/main/spring-boot-project/spring-boot-devtools/src/main/resources/org/springframework/boot/devtools/env/devtools-property-defaults.properties
