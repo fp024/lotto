@@ -6,18 +6,8 @@
       "request": "launch",
       "cwd": "${workspaceFolder}",
       "mainClass": "org.fp024.lotto.LottoApplication",
-      "projectName": "guestbook",
-      "args": "--spring.profiles.active=dev",
-      "envFile": "${workspaceFolder}/.env"
-    },
-    {
-      "type": "java",
-      "name": "Spring Boot-LottoApplication<lotto>",
-      "request": "launch",
-      "cwd": "${workspaceFolder}",
-      "mainClass": "org.fp024.lotto.LottoApplication",
       "projectName": "lotto",
-      "args": "",
+      "args": "--spring.profiles.active=dev",
       "envFile": "${workspaceFolder}/.env"
     }
   ]
