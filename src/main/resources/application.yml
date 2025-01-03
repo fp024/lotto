@@ -4,13 +4,21 @@ server:
 spring:
   application:
     name: lotto
+  config:
+    import: vault://
+  cloud:
+    vault:
+      uri: http://lvm.vault-server:8200
+      kv:
+        backend: kv_study_project
+        default-context: lotto
   profiles:
     active: dev
   datasource:    
     driver-class-name: org.mariadb.jdbc.Driver
-    url: jdbc:mariadb://localvmdb.mariadb_11:33306/lotto
-    username: lottouser
-    password: lottouser
+    url: ${db.url}
+    username: ${db.username}
+    password: ${db.password}
     hikari:
       minimum-idle: 5
       maximum-pool-size: 15
@@ -43,7 +51,7 @@ spring:
   config:
     activate:
       on-profile:
-      - dev      
+      - dev
   devtools:
     # 💡자동으로 다음에 명시된 프로퍼티를 추가하는데, 나는 필요한 것만 명시적으로 넣는 것이 좋겠다.
     # https://github.com/spring-projects/spring-boot/blob/main/spring-boot-project/spring-boot-devtools/src/main/resources/org/springframework/boot/devtools/env/devtools-property-defaults.properties

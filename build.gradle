@@ -30,6 +30,7 @@ repositories {
 }
 
 dependencies {
+  implementation enforcedPlatform(libs.spring.cloud.dependencies)
   implementation 'org.springframework.boot:spring-boot-starter-web'
 
   implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
@@ -53,6 +54,8 @@ dependencies {
       classifier = 'jakarta'
     }
   }
+
+  implementation 'org.springframework.cloud:spring-cloud-starter-vault-config'
 
   compileOnly 'org.projectlombok:lombok'
   annotationProcessor 'org.projectlombok:lombok'
