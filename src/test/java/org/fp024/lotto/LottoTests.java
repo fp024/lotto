@@ -21,7 +21,11 @@ import org.junit.jupiter.api.Test;
 */
 class LottoTests {
   @Test
-  void run() {
+  void testPrioritizeDuplicates() {
+    generateAndPrintLottoNumbers();
+  }
+
+  void generateAndPrintLottoNumbers() {
     String slotA = "6  13  21  33  36  45";
     String slotB = "8  10  11  17  31  45";
     String slotC = "2  25  26  39  40  43";
@@ -35,31 +39,35 @@ class LottoTests {
     numbers.addAll(parseNumbers(slotD));
     numbers.addAll(parseNumbers(slotE));
 
+    final int requiredUniqueCount = 12;
+    final int maxNumberRange = 45;
+    final int lottoSize = 6;
+
     // 고유한 숫자가 12개 미만일 경우 랜덤 숫자 추가
-    ensureUniqueNumbers(numbers, 12, 45);
+    ensureUniqueNumbers(numbers, requiredUniqueCount, maxNumberRange);
 
     // 중복된 것 우선순위 적용
-    List<Integer> prioritizedDuplicates = selectUniqueNumbers(numbers, 6, true);
+    List<Integer> prioritizedDuplicates = selectUniqueNumbers(numbers, lottoSize, true);
     prioritizedDuplicates.sort(Comparator.naturalOrder());
     System.out.println("중복된 것 우선순위 적용: " + prioritizedDuplicates);
 
     // 중복되지 않은 것 우선순위 적용
-    List<Integer> prioritizedUniques = selectUniqueNumbers(numbers, 6, false);
+    List<Integer> prioritizedUniques = selectUniqueNumbers(numbers, lottoSize, false);
     prioritizedUniques.sort(Comparator.naturalOrder());
     System.out.println("중복되지 않은 것 우선순위 적용: " + prioritizedUniques);
 
     // 완전 랜덤 01
-    List<Integer> randomSelection = selectRandomNumbers(numbers, 6);
+    List<Integer> randomSelection = selectRandomNumbers(numbers, lottoSize);
     randomSelection.sort(Comparator.naturalOrder());
     System.out.println("완전 랜덤 01: " + randomSelection);
 
     // 완전 랜덤 02
-    randomSelection = selectRandomNumbers(numbers, 6);
+    randomSelection = selectRandomNumbers(numbers, lottoSize);
     randomSelection.sort(Comparator.naturalOrder());
     System.out.println("완전 랜덤 02: " + randomSelection);
 
     // 완전 랜덤 03
-    randomSelection = selectRandomNumbers(numbers, 6);
+    randomSelection = selectRandomNumbers(numbers, lottoSize);
     randomSelection.sort(Comparator.naturalOrder());
     System.out.println("완전 랜덤 03: " + randomSelection);
   }
