@@ -58,7 +58,7 @@ if (mockitoJar) {
     vmArgs: existingVmArgs,
   };
 
-  fs.writeFileSync(settingsPath, stringify(settings, null, 2));
+  fs.writeFileSync(settingsPath, stringify(settings, null, 2, { eol: '\n' }));
   console.log('settings.json updated successfully');
 } else {
   console.error('Mockito JAR not found');
