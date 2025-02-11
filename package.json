@@ -2,16 +2,16 @@
   "name": "init-project-for-vscode-java-environment",
   "version": "1.0.0",
   "type": "module",
-  "private": "true",
+  "packageManager": "yarn@4.6.0",
   "scripts": {
-    "format": "npx prettier --write \"./**/*.{html,css,js,json,vue}\"",
+    "format": "yarn prettier --write \"./**/*.{html,css,js,ts,json,vue}\"",
     "add-javac-parameters-option": "node scripts/addJavacParametersOption.js",
     "copy-mockito-jar": "node scripts/runGradleWrapper.js copyMockitoJar",
     "init-test-jvm-options": "node scripts/initTestJvmOptions.js",
-    "init-project": "npm run add-javac-parameters-option && npm run copy-mockito-jar && npm run init-test-jvm-options"
+    "init-project": "yarn add-javac-parameters-option && yarn copy-mockito-jar && yarn init-test-jvm-options"
   },
   "dependencies": {
     "comment-json": "^4.2.5",
-    "prettier": "3.3.3"
+    "prettier": "^3.5.0"
   }
 }

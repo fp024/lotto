@@ -10,7 +10,8 @@
     "/gradlew.bat",
     "/src/main/resources/static/css",
     "/src/main/resources/application*.*",
-    "/docs/database.md"
+    "/docs/database.md",
+    "yarn.lock"
   ],
   "words": [
     "codegen",
