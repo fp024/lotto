@@ -54,11 +54,11 @@ __metadata:
   resolution: "init-project-for-vscode-java-environment@workspace:."
   dependencies:
     comment-json: "npm:^4.2.5"
-    prettier: "npm:3.5.0"
+    prettier: "npm:^3.5.0"
   languageName: unknown
   linkType: soft
 
-"prettier@npm:3.5.0":
+"prettier@npm:^3.5.0":
   version: 3.5.0
   resolution: "prettier@npm:3.5.0"
   bin:
