@@ -4,10 +4,7 @@
 ##### plugins versions #####
 
 # Spring Boot 3.4.x의 최신 버전 #
-spring-boot-v3dot4-plugin = "3.4.1"
-
-# Spring Boot 3.3.x의 최신 버전 #
-spring-boot-v3dot3-plugin = "3.3.6"
+spring-boot-v3dot4-plugin = "3.4.2"
 
 # https://github.com/spring-gradle-plugins/dependency-management-plugin
 spring-dependency-management-plugin = "1.1.7"
@@ -37,6 +34,5 @@ webjars-bootstrap = { module = "org.webjars:bootstrap", version.ref = "webjars-b
 
 [plugins]
 spring-boot-v3dot4 = { id = "org.springframework.boot", version.ref = "spring-boot-v3dot4-plugin" }
-spring-boot-v3dot3 = { id = "org.springframework.boot", version.ref = "spring-boot-v3dot3-plugin" }
 
 spring-dependency-management = { id = "io.spring.dependency-management", version.ref = "spring-dependency-management-plugin" }
