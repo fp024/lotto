@@ -22,7 +22,8 @@
     "Quarydsl",
     "thymeleaf",
     "ultraq",
-    "webjars"
+    "webjars",
+    "xerial"
   ],
   "ignoreWords": [],
   "import": []
