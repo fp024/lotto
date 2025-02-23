@@ -1,4 +1,4 @@
-import fs from 'fs';
+import { readdir, readFile, writeFile } from 'fs/promises';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import { parse, stringify } from 'comment-json';
@@ -7,14 +7,14 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 const javaAgentDir = path.join(__dirname, '../javaagent-libs');
-const files = fs.readdirSync(javaAgentDir);
+const files = await readdir(javaAgentDir);
 const mockitoJar = files.find(
   (file) => file.startsWith('mockito-core') && file.endsWith('.jar')
 );
 
 if (mockitoJar) {
   const settingsPath = path.join(__dirname, '../.vscode/settings.json');
-  const settings = parse(fs.readFileSync(settingsPath, 'utf8'));
+  const settings = parse(await readFile(settingsPath, 'utf8'));
 
   let existingVmArgs = settings['java.test.config']?.vmArgs || [];
   const mockitoJavaAgentIndex = existingVmArgs.findIndex((arg) =>
@@ -58,7 +58,7 @@ if (mockitoJar) {
     vmArgs: existingVmArgs,
   };
 
-  fs.writeFileSync(settingsPath, stringify(settings, null, 2, { eol: '\n' }));
+  await writeFile(settingsPath, stringify(settings, null, 2, { eol: '\n' }));
   console.log('settings.json updated successfully');
 } else {
   console.error('Mockito JAR not found');
