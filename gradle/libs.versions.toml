@@ -4,7 +4,7 @@
 ##### plugins versions #####
 
 # Spring Boot 3.4.x의 최신 버전 #
-spring-boot-v3dot4-plugin = "3.4.2"
+spring-boot-v3dot4-plugin = "3.4.3"
 
 # https://github.com/spring-gradle-plugins/dependency-management-plugin
 spring-dependency-management-plugin = "1.1.7"
