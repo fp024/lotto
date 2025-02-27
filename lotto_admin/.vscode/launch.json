@@ -2,6 +2,13 @@
   "configurations": [
     {
       "type": "java",
+      "name": "LottoApplication",
+      "request": "launch",
+      "mainClass": "org.fp024.lotto.LottoApplication",
+      "projectName": "lotto_admin"
+    },
+    {
+      "type": "java",
       "name": "[DEV] LottoApplication",
       "request": "launch",
       "cwd": "${workspaceFolder}",

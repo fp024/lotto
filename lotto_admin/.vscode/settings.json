@@ -1,7 +1,7 @@
 {
   "java.autobuild.enabled": true,
   "[java]": {
-    "editor.formatOnSave": false
+    "editor.formatOnSave": true
   },
   "[html]": {
     "editor.formatOnSave": true
