@@ -54,6 +54,7 @@ public class MemberRole extends BaseEntity {
   @Getter
   @EqualsAndHashCode
   @Builder
+  @ToString
   @NoArgsConstructor
   @AllArgsConstructor
   public static class MemberRoleId implements Serializable {
