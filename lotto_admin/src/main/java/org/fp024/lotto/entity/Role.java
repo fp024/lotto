@@ -11,6 +11,8 @@ import jakarta.persistence.JoinColumn;
 import jakarta.persistence.Table;
 import java.util.HashSet;
 import java.util.Set;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -19,7 +21,9 @@ import org.fp024.lotto.constant.Constants;
 
 /** 권한 */
 @Getter
+@Builder
 @NoArgsConstructor
+@AllArgsConstructor
 @Entity
 @ToString
 @EqualsAndHashCode(
@@ -40,6 +44,7 @@ public class Role extends BaseEntity {
   private String description;
 
   /** 접근 URL 패턴 목록 */
+  @Builder.Default
   @ElementCollection
   @CollectionTable(
       name = Constants.TABLE_PREFIX + "role_url_patterns",

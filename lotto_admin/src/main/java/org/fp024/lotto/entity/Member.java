@@ -6,6 +6,8 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -15,7 +17,9 @@ import org.fp024.lotto.constant.Constants;
 /** 회원 */
 @Getter
 @Entity
+@Builder
 @NoArgsConstructor
+@AllArgsConstructor
 @ToString
 @EqualsAndHashCode(
     of = {"id"},
@@ -27,7 +31,7 @@ public class Member extends BaseEntity {
   private Long id;
 
   @Column(unique = true)
-  private String nickName;
+  private String nickname;
 
   private String password;
 }

@@ -2,18 +2,11 @@
   "configurations": [
     {
       "type": "java",
-      "name": "LottoApplication",
-      "request": "launch",
-      "mainClass": "org.fp024.lotto.LottoApplication",
-      "projectName": "lotto_admin"
-    },
-    {
-      "type": "java",
       "name": "[DEV] LottoApplication",
       "request": "launch",
       "cwd": "${workspaceFolder}",
       "mainClass": "org.fp024.lotto.LottoApplication",
-      "projectName": "lotto",
+      "projectName": "lotto_admin",
       "args": "--spring.profiles.active=dev",
       "envFile": "${workspaceFolder}/.env"
     }
