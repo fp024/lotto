@@ -2,13 +2,13 @@
   "name": "init-project-for-vscode-java-environment",
   "version": "1.0.0",
   "type": "module",
-  "packageManager": "yarn@4.6.0",
+  "packageManager": "pnpm@10.4.1+sha512.c753b6c3ad7afa13af388fa6d808035a008e30ea9993f58c6663e2bc5ff21679aa834db094987129aa4d488b86df57f7b634981b2f827cdcacc698cc0cfb88af",
   "scripts": {
-    "format": "yarn prettier --write \"./**/*.{html,css,js,ts,json,vue}\"",
+    "format": "pnpm prettier --write \"./**/*.{html,css,js,ts,json,vue}\"",
     "add-javac-parameters-option": "node scripts/addJavacParametersOption.js",
     "copy-mockito-jar": "node scripts/runGradleWrapper.js copyMockitoJar",
     "init-test-jvm-options": "node scripts/initTestJvmOptions.js",
-    "init-project": "yarn add-javac-parameters-option && yarn copy-mockito-jar && yarn init-test-jvm-options"
+    "init-project": "pnpm add-javac-parameters-option && pnpm copy-mockito-jar && pnpm init-test-jvm-options"
   },
   "dependencies": {
     "comment-json": "^4.2.5",

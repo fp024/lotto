@@ -12,11 +12,6 @@
   "[javascript]": {
     "editor.formatOnSave": true
   },
-  "search.exclude": {
-    "**/.yarn": true,
-    "**/.pnp.*": true
-  },
-  "prettier.prettierPath": ".yarn/sdks/prettier/index.cjs",
   "spring-boot.ls.problem.version-validation.UPDATE_LATEST_MINOR_VERSION": "IGNORE",
   "java.test.config": {
     "vmArgs": [
