@@ -4,7 +4,7 @@
 ##### plugins versions #####
 
 # Spring Boot 3.4.x의 최신 버전 #
-spring-boot-v3dot4-plugin = "3.4.3"
+spring-boot-v3dot4-plugin = "3.4.4"
 
 # https://github.com/spring-gradle-plugins/dependency-management-plugin
 spring-dependency-management-plugin = "1.1.7"
@@ -12,7 +12,7 @@ spring-dependency-management-plugin = "1.1.7"
 
 ##### libraries versions #####
 # https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-dependencies
-spring-cloud-dependencies = "2024.0.0"
+spring-cloud-dependencies = "2024.0.1"
 
 ### WebJars ###
 # https://mvnrepository.com/artifact/org.webjars/webjars-locator

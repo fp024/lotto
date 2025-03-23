@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "type": "module",
   "private": true,
-  "packageManager": "pnpm@10.6.3",
+  "packageManager": "pnpm@10.6.5",
   "scripts": {
     "preinstall": "npx only-allow pnpm",
     "format": "pnpm prettier --write \"./**/*.{html,css,js,jsx,ts,tsx,json,vue}\"",

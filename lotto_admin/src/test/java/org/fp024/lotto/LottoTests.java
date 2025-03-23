@@ -12,12 +12,12 @@ import java.util.Set;
 import org.junit.jupiter.api.Test;
 
 /*
-  1163회 도전 👍
-    중복된 것 우선순위 적용: [3, 16, 29, 33, 38, 40]
-    중복되지 않은 것 우선순위 적용: [1, 8, 18, 19, 22, 39]
-    완전 랜덤 01: [1, 4, 25, 29, 34, 36]
-    완전 랜덤 02: [3, 4, 12, 16, 22, 33]
-    완전 랜덤 03: [1, 4, 15, 18, 25, 40]
+  1165회 도전 👍
+    중복된 것 우선순위 적용: [17, 30, 37, 40, 41, 42]
+    중복되지 않은 것 우선순위 적용: [1, 3, 8, 40, 41, 43]
+    완전 랜덤 01: [5, 8, 22, 28, 30, 40]
+    완전 랜덤 02: [10, 24, 30, 40, 41, 42]
+    완전 랜덤 03: [20, 22, 24, 28, 29, 41]
 */
 class LottoTests {
   @Test
@@ -26,11 +26,11 @@ class LottoTests {
   }
 
   void generateAndPrintLottoNumbers() {
-    String slotA = "16  29  33  36  39  40";
-    String slotB = "3  13  16  25  29  40";
-    String slotC = "3  4  6  18  36  38";
-    String slotD = "8  12  14  22  29  38";
-    String slotE = "1  4  15  19  33  34";
+    String slotA = "1  10  28  29  42  43";
+    String slotB = "20  22  24  30  37  42";
+    String slotC = "3  5  12  30  37  41";
+    String slotD = "8  9  15  30  32  40";
+    String slotE = "13  14  17  18  31  34";
 
     List<Integer> numbers = new ArrayList<>();
     numbers.addAll(parseNumbers(slotA));
